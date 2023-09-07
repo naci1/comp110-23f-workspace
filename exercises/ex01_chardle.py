@@ -17,7 +17,7 @@ while char_index < 5:
   if five_char_word[char_index] == "e":
     print(single_char + "found at index" + str(char_index + 1))
     character_counter = character_counter + 1
-    char_index = char_index + 1
+  char_index = char_index + 1
 if character_counter == 0:
   print("No instances of " + single_char + " found in " + five_char_word)
 elif character_counter == 1:
