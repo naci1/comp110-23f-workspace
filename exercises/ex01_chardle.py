@@ -19,9 +19,9 @@ for char in five_char_word :
 if character_counter == 0:
   print("No instances of " + single_char + " found in " + five_char_word)
 elif character_counter == 1:
-  print(str(character_counter) + " instances of " + single_char + " found in " + five_char_word)
-else:
   print(str(character_counter) + " instance of " + single_char + " found in " + five_char_word)
+else:
+  print(str(character_counter) + " instances of " + single_char + " found in " + five_char_word)
 
 
 
