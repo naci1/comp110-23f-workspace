@@ -18,8 +18,10 @@ for index in five_char_word :
     character_counter = character_counter + 1
 if character_counter == 0:
   print("No instances of " + single_char + " found in " + five_char_word)
+elif character_counter == 1:
+  print(str(character_counter) + " instances of " + single_char + " found in " + five_char_word)
 else:
-  print(character_counter + " instance of " + single_char + " found in " + five_char_word)
+  print(str(character_counter) + " instance of " + single_char + " found in " + five_char_word)
 
 
 
