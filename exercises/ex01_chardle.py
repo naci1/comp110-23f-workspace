@@ -14,7 +14,7 @@ print("Searching for " + single_char + " in " + five_char_word)
 character_counter: int = 0
 char_index: int = 0
 while char_index < 5:
-  if five_char_word[char_index] == "e":
+  if five_char_word[char_index] == single_char:
     print(single_char + " found at index " + str(char_index))
     character_counter = character_counter + 1
   char_index = char_index + 1
