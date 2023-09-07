@@ -14,7 +14,7 @@ print("Searching for " + single_char + " in " + five_char_word)
 character_counter: int = 0
 for char in five_char_word :
   if char == "e" :
-    print(single_char + " found at index " + index(char))
+    print(single_char + " found at index " + five_char_word.index(char))
     character_counter = character_counter + 1
 if character_counter == 0:
   print("No instances of " + single_char + " found in " + five_char_word)
