@@ -11,19 +11,19 @@ if len(single_char)!= 1:
   print("Error: Character must be a single character.")
   exit()
 print("Searching for " + single_char + " in " + five_char_word)
-character_counter: int = 0
+single_char_counter: int = 0
 char_index: int = 0
 while char_index < 5:
   if five_char_word[char_index] == single_char:
     print(single_char + " found at index " + str(char_index))
-    character_counter = character_counter + 1
+    single_char_counter = single_char_counter + 1
   char_index = char_index + 1
-if character_counter == 0:
+if single_char_counter == 0:
   print("No instances of " + single_char + " found in " + five_char_word)
-elif character_counter == 1:
-  print(str(character_counter) + " instance of " + single_char + " found in " + five_char_word)
+elif single_char_counter == 1:
+  print(str(single_char_counter) + " instance of " + single_char + " found in " + five_char_word)
 else:
-  print(str(character_counter) + " instances of " + single_char + " found in " + five_char_word)
+  print(str(single_char_counter) + " instances of " + single_char + " found in " + five_char_word)
 
 
 
