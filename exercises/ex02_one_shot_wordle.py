@@ -11,7 +11,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 secret_word : str = "cool"
 word_guess : str = input(f"What is your {len(secret_word)}-letter guess? ")
 while len(word_guess)!= len(secret_word) :
-    word_guess = input(f"That was not {len{secret_word}} letters! Try again: ")
+    word_guess = input(f"That was not {len(secret_word)} letters! Try again: ")
 index : int = 0
 emoji_string : str = ""
 while index < len(secret_word):
