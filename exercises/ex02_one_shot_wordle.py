@@ -8,7 +8,7 @@ GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
 
-secret_word : str = "python"
+secret_word : str = "knoll"
 word_guess : str = input("What is your 6-letter guess? ")
 while len(word_guess)!= len(secret_word) :
     word_guess: str = input("That was not 6 letters! Try again: ")
@@ -19,12 +19,12 @@ while index < len(secret_word):
         print(f"{GREEN_BOX}")
     else:
         character_exists: bool = False
-        index_present : int = 0
-        while character_exists == False and index_present < len(secret_word):
-            if word_guess[index_present] == secret_word[index]:
+        index_present_in_secret_word : int = 0
+        while character_exists == False and index_present_in_secret_word < len(secret_word):
+            if word_guess[index] == secret_word[index_present_in_secret_word]:
                 character_exists = True
             else :
-                index_present +=1
+                index_present_in_secret_word +=1
         if character_exists == True:
             print(f"{YELLOW_BOX}")
         else:
