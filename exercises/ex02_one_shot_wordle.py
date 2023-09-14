@@ -7,11 +7,8 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
-
 secret_word: str = "python"   
 word_guess: str = input(f"What is your {len(secret_word)}-letter guess? ")   
-
-
 
 while len(word_guess) != len(secret_word):
     word_guess = input(f"That was not {len(secret_word)} letters! Try again: ")
