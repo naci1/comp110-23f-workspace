@@ -20,7 +20,7 @@ while index < len(secret_word):
     else:
         character_exists: bool = False
         index_present : int = 0
-        while index_present == False and index_present < len(secret_word):
+        while character_exists == False and index_present < len(secret_word):
             if word_guess[index_present] == secret_word[index]:
                 character_exists = True
             else :
