@@ -16,21 +16,21 @@ while len(word_guess) != len(secret_word):
 index: int = 0 
 emoji_string: str = "" 
 
-## this while loop iterates through the the entire secret_word character by character to see if it matches
+# this while loop iterates through the the entire secret_word character by character to see if it matches
 while index < len(secret_word):
 
-    # this iterates a green_emoji box
+    # this adds a green_emoji box
     if word_guess[index] == secret_word[index]: 
         emoji_string = f"{emoji_string}{GREEN_BOX}" 
     
-    # this else statement is used to figure out whether to iterate a yellow_emoji or white_emoji
+    # this else statement is used to figure out whether to add a yellow_emoji or white_emoji
     else:
         character_exists: bool = False
         index_present_in_secret_word: int = 0
         # this conditional checks whether the index is present anywhere else in the string 
         while (not character_exists) and (index_present_in_secret_word < len(secret_word)):
             if word_guess[index] == secret_word[index_present_in_secret_word]:
-                #We set the boolean to false and exit out the loop as we found our character
+                # we set the boolean(character_exists) to true and exit out the loop as we found our character
                 character_exists = True  
             else:
                 index_present_in_secret_word += 1 
