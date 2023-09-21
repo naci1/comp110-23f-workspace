@@ -34,11 +34,15 @@ def emojified(word_guess : str, secret_word: str) -> str:
           if word_guess[index] == secret_word[index]:
               emoji_string = f"{emoji_string}{GREEN_BOX}"
           else:
-              index_present_in_secret_word = 0
-              while index_present_in_secret_word < len(secret_word):
+              index_present_in_secret_word: int = 0
+              found : bool = False
+              while index_present_in_secret_word < len(secret_word) and (not found):
                   if word_guess[index] == secret_word[index_present_in_secret_word]:
-                      emoji_string = f"{emoji_string}{YELLOW_BOX}"
-                  index_present_in_secret_word +=1
+                      found = True
+                  else:    
+                      index_present_in_secret_word +=1
+              if found:
+                  emoji_string = f"{emoji_string}{YELLOW_BOX}"
       else:
           emoji_string = f"{emoji_string}{WHITE_BOX}"
       index+=1
