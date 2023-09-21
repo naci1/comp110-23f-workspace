@@ -77,23 +77,6 @@ def main() -> None:
         print(f"You won in {current_turn}/6 turns!")
     else:
         print("X/6 - Sorry, try again tomorrow!")
-    
 
-
-
-        
-
-
-    
-                  
-
-             
-             
-             
-        
-            
-
-
-
-
-   
+if __name__ == "__main__":
+    main()
