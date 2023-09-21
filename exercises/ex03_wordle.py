@@ -47,6 +47,42 @@ def emojified(word_guess : str, secret_word: str) -> str:
           emoji_string = f"{emoji_string}{WHITE_BOX}"
       index+=1
   return emoji_string
+
+def input_guess(expected_length: int) -> str:
+    """
+    This function tries to make sure that the word that was entered by the user equals the length
+    of the secret_word. if not, we keep asking the user to input another word equal to word_guess.
+    """
+    word_guess: str = input(f"What is your {expected_length}-letter guess? ")
+    while len(word_guess) != expected_length:
+        word_guess = input(f"That was not {expected_length} letters! Try again: ")
+    return word_guess
+
+def main() -> None:
+    """The entrypoint of the program and main game loop."""
+    turns : int = 6
+    current_turn: int = 1
+    secret_word: str = "codes"
+    user_guessed_word : bool = False
+    while (current_turn <= turns) and (not user_guessed_word):
+        print(f"=== Turn {current_turn}/6 ===")
+        word_guess : str= input_guess(len(secret_word))
+        emoji_string : str = emojified(word_guess, secret_word)
+        if word_guess == secret_word:
+            user_guessed_word = True
+        else:
+            current_turn += 1
+    if user_guessed_word:
+        print(f"You won in {current_turn}/6 turns!")
+    else:
+        print("X/6 - Sorry, try again tomorrow!")
+    
+
+
+
+        
+
+
     
                   
 
