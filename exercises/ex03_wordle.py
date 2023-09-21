@@ -10,13 +10,13 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 def contains_char(word: str, character_to_be_searched: str) -> bool: 
     """This function returns whether or not the character is in the word or not."""
-    
+
     assert len(character_to_be_searched) == 1
     index: int = 0
     while index < len(word):
         if word[index] == character_to_be_searched:
             return True
-        index += 11
+        index += 1
     return False
 
 def emojified(word_guess: str, secret_word: str) -> str:
@@ -46,7 +46,7 @@ def emojified(word_guess: str, secret_word: str) -> str:
                     emoji_string = f"{emoji_string}{YELLOW_BOX}"
         else:
             emoji_string = f"{emoji_string}{WHITE_BOX}"
-        index+=1
+        index += 1
     return emoji_string
 
 def input_guess(expected_length: int) -> str:
