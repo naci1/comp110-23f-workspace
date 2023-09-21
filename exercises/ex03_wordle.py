@@ -19,30 +19,30 @@ def contains_char(word : str, character_to_be_searched: str) -> bool:
     return False
 
 def emojified(word_guess : str, secret_word: str) -> str:
-   """
+  """
    This function returns the emoji string of the the word you entered and compares it with the secret_word.
    It makes use of the contains_char function to see if the word that was guessed is currently present
    in secret_word. If it is present in the same index, then we add a green box to the emoji string.
    If the character is present in the word_guess string but not in the same index, we add a 
    yellow_box. If it's not present at all, we add a white box to the emoji_string.
-   """
-   assert len(word_guess) == len(secret_word)
-   emoji_string : str = ""
-   index : int = 0
-   while index < len(secret_word):
-      if contains_char(word_guess, secret_word[index]):
+  """
+  assert len(word_guess) == len(secret_word)
+  emoji_string : str = ""
+  index : int = 0
+  while index < len(secret_word):
+      if (contains_char(word_guess, secret_word[index])):
           if word_guess[index] == secret_word[index]:
-            emoji_string = f"{emoji_string}{GREEN_BOX}"
+              emoji_string = f"{emoji_string}{GREEN_BOX}"
           else:
-            index_present_in_secret_word = 0
-            while index_present_in_secret_word < len(secret_word):
-                if word_guess[index] == secret_word[index_present_in_secret_word]:
-                  emoji_string = f"{emoji_string}{YELLOW_BOX}"
-                index_present_in_secret_word +=1
+              index_present_in_secret_word = 0
+              while index_present_in_secret_word < len(secret_word):
+                  if word_guess[index] == secret_word[index_present_in_secret_word]:
+                      emoji_string = f"{emoji_string}{YELLOW_BOX}"
+                  index_present_in_secret_word +=1
       else:
-        emoji_string = f"{emoji_string}{WHITE_BOX}"
+          emoji_string = f"{emoji_string}{WHITE_BOX}"
       index+=1
-   return emoji_string
+  return emoji_string
     
                   
 
