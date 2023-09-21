@@ -23,10 +23,10 @@ def contains_char(word: str, character_to_be_searched: str) -> bool:
 def emojified(word_guess: str, secret_word: str) -> str:
     """This function returns the emoji string of the the word you entered and compares it with the secret_word.
        
-       It makes use of the contains_char function to see if the word that was guessed is currently present
-       in secret_word. If it is present in the same index, then we add a green box to the emoji string.
-       If the character is present in the word_guess string but not in the same index, we add a 
-       yellow_box. If it's not present at all, we add a white box to the emoji_string.
+    It makes use of the contains_char function to see if the word that was guessed is currently present
+    in secret_word. If it is present in the same index, then we add a green box to the emoji string.
+    If the character is present in the word_guess string but not in the same index, we add a 
+    yellow_box. If it's not present at all, we add a white box to the emoji_string.
     """
     assert len(word_guess) == len(secret_word)
     emoji_string: str = ""
@@ -70,7 +70,7 @@ def main() -> None:
     user_guessed_word: bool = False
     while current_turn <= turns and (not user_guessed_word):
         print(f"=== Turn {current_turn}/6 ===")
-        word_guess: str= input_guess(len(secret_word))
+        word_guess: str = input_guess(len(secret_word))
         emoji_string: str = emojified(word_guess, secret_word)
         print(emoji_string)
         if word_guess == secret_word:
