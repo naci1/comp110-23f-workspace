@@ -52,10 +52,7 @@ def emojified(word_guess: str, secret_word: str) -> str:
 
 
 def input_guess(expected_length: int) -> str:
-    """This function tries to make sure that the word that was entered by the user equals the length of the secret_word. 
-    
-    If not, we keep asking the user to input another word equal to word_guess.
-    """
+    """This function tries to make sure that the word that was entered by the user equals the length of the secret_word. If not, we keep asking the user to input another word equal to word_guess."""
     word_guess: str = input(f"Enter a {expected_length} character word: ")
     while len(word_guess) != expected_length:
         word_guess = input(f"That wasn't {expected_length} chars! Try again: ")
