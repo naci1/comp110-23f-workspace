@@ -53,7 +53,7 @@ def input_guess(expected_length: int) -> str:
     This function tries to make sure that the word that was entered by the user equals the length
     of the secret_word. if not, we keep asking the user to input another word equal to word_guess.
     """
-    word_guess: str = input(f"What is your {expected_length}-letter guess? ")
+    word_guess: str = input(f"Enter a {expected_length} character word: ")
     while len(word_guess) != expected_length:
         word_guess = input(f"That was not {expected_length} letters! Try again: ")
     return word_guess
@@ -68,6 +68,7 @@ def main() -> None:
         print(f"=== Turn {current_turn}/6 ===")
         word_guess : str= input_guess(len(secret_word))
         emoji_string : str = emojified(word_guess, secret_word)
+        print(emoji_string)
         if word_guess == secret_word:
             user_guessed_word = True
         else:
