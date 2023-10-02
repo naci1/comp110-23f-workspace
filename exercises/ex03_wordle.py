@@ -103,7 +103,7 @@ def main() -> None:
     if user_guessed_word:
         print(f"You won in {current_turn}/6 turns!")
 
-    # prints thta we did not win the worldle.
+    # prints that we did not win the worldle.
     else:
         print("X/6 - Sorry, try again tomorrow!")
 
