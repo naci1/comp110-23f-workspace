@@ -26,6 +26,7 @@ def all(int_list: list[int], int_to_be_searched: int) -> bool:
     # all elements are equal to the integer to be searched and we return True.
     return True
 
+
 def max(int_list: list[int]) -> int:
     """This function takes an integer list and returns the max value."""
     # this raises a value error due to the fact that there are no elements in the integer list.
@@ -44,15 +45,15 @@ def max(int_list: list[int]) -> int:
                 # assign the max value to the element inside that particular index of int_list
                 max = int_list[counter]
 
-            #increment the counter and goes to the next value in the list
+            # increment the counter and goes to the next value in the list
             counter += 1
 
         # returns the max value
         return max
-    
-"""This function tries to check if every element at every index of two lists are the same"""
+  
+
 def is_equal(int_list_one: list[int], int_list_two: list[int]) -> bool:
-    
+    """This function tries to check if every element at every index of two lists are the same."""
     # if the sizes of the two lists are not the same then the function automatically returns False and exits out of the function
     if len(int_list_one) != len(int_list_two):
         return False
