@@ -25,7 +25,7 @@ def all(int_list: list[int], int_to_be_searched: int) -> bool:
 def max(int_list: list[int]) -> int:
     
     #This raises a value error due to the fact that there are no elements in the integer list.
-    if len(input) == 0:
+    if len(int_list) == 0:
         raise ValueError("max() arg is an empty list")
     else:
         
