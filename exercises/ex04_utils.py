@@ -6,6 +6,10 @@ __author__ = "730652828"
 def all(int_list: list[int], int_to_be_searched: int) -> bool:
     counter: int = 0
 
+    #If the length of the list is 0, then automatically return false as there is nothing to check
+    if len(int_list) == 0:
+        return False
+
     #a counter is initialized to traverse through the list
     while counter < len(int_list):
         
@@ -48,6 +52,10 @@ def max(int_list: list[int]) -> int:
     
 """This function tries to check if every element at every index of two lists are the same"""
 def is_equal(int_list_one: list[int], int_list_two: list[int]) -> bool:
+    
+    #if the sizes of the two lists are not the same then the function automatically returns False and exits out of the function
+    if len(int_list_one) != len(int_list_two):
+        return False
     
     #initalizes a counter to traverse through the entire array
     counter: int = 0
