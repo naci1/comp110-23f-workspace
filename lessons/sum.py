@@ -22,7 +22,7 @@ def f_sum(vals: list[float]) -> float:
 
 
 def f_range_sum(vals: list[float]) -> float:
-    """This calculates the sum of a list of floats using a for loop with the "range" function"""
+    """This calculates the sum of a list of floats using a for loop with the "range" function."""
     if len(vals) == 0:
         return 0.0
     sum: float = 0 
