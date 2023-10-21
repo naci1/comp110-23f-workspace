@@ -111,7 +111,7 @@ def Circle(a_turtle: Turtle, x: float, y: float, radius: float, fcolor: str, pco
     a_turtle.end_fill()
 
 
-def Door(a_turtle: Turtle, x: float, y:float, door_length: float, door_width: float) -> None:
+def Door(a_turtle: Turtle, x: float, y: float, door_length: float, door_width: float) -> None:
     """This method makes a door to our house. It also creates a doorknob using the Circle command created."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
