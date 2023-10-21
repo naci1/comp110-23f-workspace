@@ -12,7 +12,7 @@ i : int = 0
 leo.begin_fill()
 leo.pencolor(255,0,0) #this is pure red
 leo.fillcolor(128,128,128) #This is gray. All the RGB values are half of the red,blue, and green.
-while(i < 3):
+while i < 3:
     leo.forward(250)
     leo.left(120) #changed from square to triangle
     i = i+1
