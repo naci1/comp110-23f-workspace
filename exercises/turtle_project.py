@@ -15,7 +15,7 @@ def main() -> None:
     # TODO: Call the procedures you define and pass your Turtle(s) as an argument.
     rectangle(ground, -300, -250, 600, 150, "green", "green")
     house(epic_house,-200 ,-100)
-    tree(epic_tree, 0, -100)
+    tree(epic_tree, 100, -100)
     done()
 
 
@@ -67,7 +67,7 @@ def tree(a_turtle: Turtle, x: float, y: float):
     a_turtle.goto(x,y)
     a_turtle.pendown()
     rectangle(a_turtle, x, y, 50, 200, "brown", "brown")
-    rectangle(a_turtle, x-50, y, 150 , 50, "green", "green")
+    rectangle(a_turtle, x-50, y+200, 150 , 50, "green", "green")
     
 
 # TODO: Use the __name__ is "__main__" idiom shown in class
