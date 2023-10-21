@@ -7,25 +7,23 @@ colormode(255)
 
 # this is the global variable for the speed of all the Turtle commands
 SPEED = 100
- 
+
+
 def main() -> None:
     """The entrypoint of my scene."""
-    # TODO: Declare your Turtle variable(s) here.
     ground: Turtle = Turtle()
     epic_house: Turtle = Turtle()
     epic_tree_1: Turtle = Turtle()
-    epic_tree_2 : Turtle = Turtle()
+    epic_tree_2: Turtle = Turtle()
     sun: Turtle = Turtle()
-    # TODO: Call the procedures you define and pass your Turtle(s) as an argument.
-    rectangle(ground, -300, -250, 600, 150, "green", "green")
-    house(epic_house,-200 ,-100)
-    tree(epic_tree_1, 100, -100, 1)
-    tree(epic_tree_2, 200, -100, 0.5)
-    Circle(sun, -250, 165, 50, "yellow", "yellow", 360)
+    rectangle(ground , -300, -250, 600, 150, "green", "green")
+    house(epic_house ,-200 ,-100)
+    tree(epic_tree_1 , 100, -100, 1)
+    tree(epic_tree_2 , 200, -100, 0.5)
+    Circle(sun , -250, 165, 50, "yellow", "yellow", 360)
     done()
 
 
-# TODO: Define the procedures for other components in your scene here.
 def rectangle(a_turtle: Turtle, x: float, y: float, length: float, width: float, fcolor:str, pcolor:str) -> None:
     """This function creates a rectangle that can be used multiple times throughout the program."""
     a_turtle.speed(SPEED)
@@ -44,6 +42,7 @@ def rectangle(a_turtle: Turtle, x: float, y: float, length: float, width: float,
         a_turtle.left(90)
         i += 1
     a_turtle.end_fill()
+
 
 def triangle(a_turtle: Turtle, x: float, y: float, length: float, fcolor: str, pcolor:str) -> None:
     """This function provides the code for a triangle that can be used in our code."""
@@ -87,8 +86,8 @@ def tree(a_turtle: Turtle, x: float, y: float, shrink_factor: float) -> None:
     a_turtle.pendown()
     rectangle(a_turtle, x, y, 50*shrink_factor, 200*shrink_factor, "brown", "brown")
     rectangle(a_turtle, x-(50*shrink_factor), y+(200*shrink_factor), 150*shrink_factor , 50*shrink_factor, "green", "green")
-    new_pos_x: int = a_turtle.xcor()
-    new_pos_y: int = a_turtle.ycor()
+    new_pos_x: float = a_turtle.xcor()
+    new_pos_y: float = a_turtle.ycor()
     a_turtle.forward(150*shrink_factor)
     a_turtle.left(90)
     a_turtle.forward(50*shrink_factor)
@@ -119,7 +118,6 @@ def Door(a_turtle: Turtle, x:float, y:float, door_length: float, door_width: flo
     rectangle(a_turtle, x, y, door_length, door_width, "gray", "black")
     Circle(a_turtle, x + 80, y + 50, 5, "blue", "blue", 360)
 
-# TODO: Use the __name__ is "__main__" idiom shown in class
 
 if __name__ == "__main__":
     main()
