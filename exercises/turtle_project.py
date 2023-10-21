@@ -17,14 +17,14 @@ def main() -> None:
     epic_tree_2: Turtle = Turtle()
     sun: Turtle = Turtle()
     rectangle(ground, -300, -250, 600, 150, "green", "green")
-    house(epic_house, -200 ,-100)
+    house(epic_house, -200, -100)
     tree(epic_tree_1, 100, -100, 1)
     tree(epic_tree_2, 200, -100, 0.5)
     Circle(sun, -250, 165, 50, "yellow", "yellow", 360)
     done()
 
 
-def rectangle(a_turtle: Turtle, x: float, y: float, length: float, width: float, fcolor:str, pcolor: str) -> None:
+def rectangle(a_turtle: Turtle, x: float, y: float, length: float, width: float, fcolor: str, pcolor: str) -> None:
     """This function creates a rectangle that can be used multiple times throughout the program."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
@@ -85,7 +85,7 @@ def tree(a_turtle: Turtle, x: float, y: float, shrink_factor: float) -> None:
     a_turtle.goto(x, y)
     a_turtle.pendown()
     rectangle(a_turtle, x, y, 50 * shrink_factor, 200 * shrink_factor, "brown", "brown")
-    rectangle(a_turtle, x - (50 * shrink_factor), y + (200 * shrink_factor), 150 * shrink_factor , 50 * shrink_factor, "green", "green")
+    rectangle(a_turtle, x - (50 * shrink_factor), y + (200 * shrink_factor), 150 * shrink_factor, 50 * shrink_factor, "green", "green")
     new_pos_x: float = a_turtle.xcor()
     new_pos_y: float = a_turtle.ycor()
     a_turtle.forward(150 * shrink_factor)
@@ -111,8 +111,8 @@ def Circle(a_turtle: Turtle, x: float, y: float, radius: float, fcolor: str, pco
     a_turtle.end_fill()
 
 
-def Door(a_turtle: Turtle, x:float, y:float, door_length: float, door_width: float) -> None:
-    """This method makes a door to our house. It also creates a doorknob using the Circle command created """
+def Door(a_turtle: Turtle, x: float, y:float, door_length: float, door_width: float) -> None:
+    """This method makes a door to our house. It also creates a doorknob using the Circle command created."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     rectangle(a_turtle, x, y, door_length, door_width, "gray", "black")
