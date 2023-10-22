@@ -30,10 +30,7 @@ def main() -> None:
 
 
 def rectangle(a_turtle: Turtle, x: float, y: float, length: float, width: float, fcolor: str, pcolor: str) -> None:
-    """This function creates a rectangle that can be used multiple times throughout the program. 
-    
-    It takes a length and width parameter and I can change the fill color and pen color.
-    """
+    """This function creates a rectangle that can be used multiple times throughout the program. It takes a length and width parameter and I can change the fill color and pen color."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     a_turtle.penup()
@@ -53,10 +50,7 @@ def rectangle(a_turtle: Turtle, x: float, y: float, length: float, width: float,
 
 
 def triangle(a_turtle: Turtle, x: float, y: float, length: float, fcolor: str, pcolor: str) -> None:
-    """This function provides the code for a triangle that can be used in our code. 
-    
-    It makes a triangle with different fill colors and pencolors.
-    """
+    """This function provides the code for a triangle that can be used in our code. It makes a triangle with different fill colors and pencolors."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     a_turtle.penup()
@@ -74,10 +68,7 @@ def triangle(a_turtle: Turtle, x: float, y: float, length: float, fcolor: str, p
 
 
 def house(a_turtle: Turtle, x: float, y: float) -> None:
-    """This function provides the code for the triangular roof and square base.
-
-    It makes use of the Door procedure that I built.
-    """
+    """This function provides the code for the triangular roof and square base. It makes use of the Door procedure that I built."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     a_turtle.penup()
@@ -90,10 +81,7 @@ def house(a_turtle: Turtle, x: float, y: float) -> None:
 
 
 def tree(a_turtle: Turtle, x: float, y: float, shrink_factor: float) -> None:
-    """This function provides the code for a tree. The tree can not be taller than the house. Therefore, I introduced a shrink_factor to make the other trees smaller.
-
-    I also used the xcor() and ycor() command (to satisfy the "Above and beyond" category(8), lines 104-105) to be used to find the position of x after creating a rectangle.
-    """
+    """This function provides the code for a tree. The tree can not be taller than the house. Therefore, I introduced a shrink_factor to make the other trees smaller. I also used the xcor() and ycor() command (to satisfy the "Above and beyond" category(8), lines 104-105) to be used to find the position of x after creating a rectangle."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     a_turtle.penup()
@@ -110,10 +98,7 @@ def tree(a_turtle: Turtle, x: float, y: float, shrink_factor: float) -> None:
 
 
 def Circle(a_turtle: Turtle, x: float, y: float, radius: float, fcolor: str, pcolor: str, angle: float) -> None:
-    """This method makes use of the built in circle command (to satisfy the "Above and beyond" category(8), line 125) to be used multiple times throughout the program.
-
-    It uses the fill color and pencolor to change the border and fill color of the circles.
-    """
+    """This method makes use of the built in circle command (to satisfy the "Above and beyond" category(8), line 125) to be used multiple times throughout the program. It uses the fill color and pencolor to change the border and fill color of the circles."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     a_turtle.penup()
@@ -127,10 +112,7 @@ def Circle(a_turtle: Turtle, x: float, y: float, radius: float, fcolor: str, pco
 
 
 def Door(a_turtle: Turtle, x: float, y: float, door_length: float, door_width: float) -> None:
-    """This method makes a door to our house using the rectangle and Circle commands. 
-    
-    It also creates a doorknob using the Circle command created.
-    """
+    """This method makes a door to our house using the rectangle and Circle commands. It also creates a doorknob using the Circle command created."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     rectangle(a_turtle, x, y, door_length, door_width, "gray", "black")
@@ -138,10 +120,7 @@ def Door(a_turtle: Turtle, x: float, y: float, door_length: float, door_width: f
 
 
 def Flower(a_turtle: Turtle, x: float, y: float, f_length: float, f_width: float, petal_radius: float) -> None:
-    """This method creates a tiny flower that grows near the house. 
-
-    It consists of the Circle and Rectangle commands to help aid in making the flower.
-    """
+    """This method creates a tiny flower that grows near the house. It consists of the Circle and Rectangle commands to help aid in making the flower."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     rectangle(a_turtle, x, y, f_length, f_width, "brown", "brown")
@@ -154,10 +133,7 @@ def Flower(a_turtle: Turtle, x: float, y: float, f_length: float, f_width: float
 
 
 def River(a_turtle: Turtle, x: float, y: float, r_length: float, r_width: float, fcolor: str) -> None: 
-    """This method creates a river that flows through the ground near the house.
-
-    I used only a fill color as the river is blue and changed the degrees to 60 and 120.
-    """
+    """This method creates a river that flows through the ground near the house. I used only a fill color as the river is blue and changed the degrees to 60 and 120."""
     a_turtle.speed(SPEED)
     a_turtle.hideturtle()
     a_turtle.penup()
