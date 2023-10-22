@@ -1,4 +1,4 @@
-"""TODO: This scence just contains a stereotypical subarb with greenary, trees, a house and a flower. It is also a sunny day!"""
+"""TODO: This scence just contains a stereotypical subarb with greenary, trees, a house, a river, and a flower. It is also a sunny day and the sun is present!"""
  
 __author__ = "730652828"
  
