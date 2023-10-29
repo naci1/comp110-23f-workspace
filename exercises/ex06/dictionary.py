@@ -5,7 +5,7 @@ __author__ = "730652828"
 
 def invert(given_dict: dict[str, str]) -> dict[str, str]:
     """This function takes a given_dict and inverts the values of the list by switching the key and value pairs and returns the new inverted dict. If two values in the original list are the same a Key_error will be produced."""
-    inverted_dict: dict[str,str] = {}
+    inverted_dict: dict[str, str] = {}
     temp_value = ""
     for key in given_dict:
         temp_value = given_dict[key]
@@ -49,7 +49,7 @@ def alphabetizer(given_list: list[str]) -> dict[str, list[str]]:
     """This function returns a dictionary where the keys are the first letters of the word and values are a list that contain all the words that begin with that specific key letter."""
     alphabetized_list: dict[str, list[str]] = {}
     used_letters: list[str] = []
-    temp_first_letter: str = 0
+    temp_first_letter: str = ""
     for word in given_list:
         temp_first_letter = word[0].lower()
         if temp_first_letter not in used_letters:
@@ -64,10 +64,10 @@ def alphabetizer(given_list: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(given_dict: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """This function returns a dictionary updated with a day as the key and a value as the updated value."""
+    new_list: list[str] = []
     if day in given_dict:
         given_dict[day] += student
     else:
-        given_dict[day] = student
+        new_list.append(student)
+        given_dict[day] = new_list
     return given_dict
-        
-
