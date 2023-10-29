@@ -37,11 +37,12 @@ def favorite_color(given_dict: dict[str, str]) -> str:
 def count(given_list: list[str]) -> dict[str, int]:
     """This function produces a dictionary which contains a key and the value of the key is the number of times that key appears in the list."""
     empty_dict: dict[str, int] = {}
-    for key in given_list:
-        if key in given_list:
-            empty_dict[key] += 1
+    word_counter: int = 0
+    for word in given_list:
+        if word in empty_dict:
+            empty_dict[word] += word_counter
         else:
-            empty_dict[key] = 1
+            empty_dict[word] = 1
     return empty_dict
 
 
