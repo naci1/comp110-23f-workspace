@@ -66,7 +66,7 @@ def update_attendance(given_dict: dict[str, list[str]], day: str, student: str) 
     """This function returns a dictionary updated with a day as the key and a value as the updated value."""
     new_list: list[str] = []
     if day in given_dict:
-        given_dict[day] += student
+        given_dict[day].append(student)
     else:
         new_list.append(student)
         given_dict[day] = new_list
