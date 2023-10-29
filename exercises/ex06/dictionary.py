@@ -40,7 +40,7 @@ def count(given_list: list[str]) -> dict[str, int]:
     word_counter: int = 0
     for word in given_list:
         if word in empty_dict:
-            empty_dict[word] += word_counter
+            empty_dict[word] += 1
         else:
             empty_dict[word] = 1
     return empty_dict
@@ -67,7 +67,7 @@ def update_attendance(given_dict: dict[str, list[str]], day: str, student: str) 
     """This function returns a dictionary updated with a day as the key and a value as the updated value."""
     new_list: list[str] = []
     if day in given_dict:
-        given_dict[day] += student
+        given_dict[day] = student
     else:
         new_list.append(student)
         given_dict[day] = new_list
