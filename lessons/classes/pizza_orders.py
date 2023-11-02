@@ -44,5 +44,10 @@ def price(input_pizza: Pizza) -> float:
 # calling a method
 
 print(sals_pizza.price())
+sals_pizza.add_toppings(10)
+print(sals_pizza.toppings)
+my_second_pizza: Pizza = sals_pizza.add_toppings_new_order(2)
+print(my_second_pizza.toppings)
+
 
 

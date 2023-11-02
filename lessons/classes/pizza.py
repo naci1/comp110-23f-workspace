@@ -1,6 +1,8 @@
 """Defining a Class!"""
 
 
+from __future__ import annotations
+
 
 """
 Think of a class defintion as a "roadmap" for objects that belong to the class.
@@ -43,6 +45,17 @@ class Pizza:
         if self.gluten_free:
             cost += 100
         return cost
+    
+    def add_toppings(self, num_toppings: int):
+        """Updates existing pizza order with num_toppings."""
+        self.toppings += num_toppings
+
+    def add_toppings_new_order(self, num_toppings: int) -> Pizza:
+        """Make a new pizza order using existing info"""
+        new_pizza: Pizza = Pizza(self.size, self.toppings + num_toppings, self.gluten_free)
+        return new_pizza
+
+
 
     
 
