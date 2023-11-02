@@ -1,7 +1,4 @@
 """This class allows us to work with Point objects."""
-
-
-
 from __future__ import annotations
 
 
@@ -14,7 +11,6 @@ class Point:
         """Assigns the x and y values to the attributes."""
         self.x = x_init
         self.y = y_init
-
 
     def scale_by(self, factor: int) -> None:
         """This allows us to scale the x and y values in the attributes."""
