@@ -105,11 +105,12 @@ def test_at_least_one_value_in_list_upper_cased() -> None:
     returned_dict = {'c': ['Cat', 'Class'], 'l': ['log', 'Lid']}
     assert alphabetizer(given_list) == returned_dict
 
+
 """The test cases below test for the function "update_attendance"."""
 
 
 def test_empty_dict_and_day_student_empty() -> None:
-    """If the given_dict is empty and student = "" and day = "", update_attendance should just return the given_dict.(edge case)"""
+    """If the given_dict is empty and student = "" and day = "", update_attendance should just return the given_dict(edge case)."""
     returned_dict: dict[str, list[str]] = {}
     student: str = ""
     day: str = ""
