@@ -119,12 +119,11 @@ def test_empty_dict_and_day_student_empty() -> None:
 
 def test_empty_dict_and_day_student_non_empty() -> None:
     """If the given_dict is empty and student and day are non_empty, update_attendance should return a dictionary with day as the key and student(as a list) as the value(use case)."""
-    returned_dict: dict[str, list[str]] = {}
     returned_value_list = []
     student: str = "Andreas"
     day: str = "Monday"
     returned_value_list.append(student)
-    returned_dict = {day: returned_value_list}
+    returned_dict: dict[str, list[str]] = {day: returned_value_list}
     assert update_attendance(returned_dict, day, student) == returned_dict
 
 
