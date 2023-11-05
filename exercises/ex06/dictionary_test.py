@@ -17,13 +17,13 @@ def test_empty_dict() -> None:
 
 def test_dict_unique_values() -> None:
     """If the given_dict has unique values, it should invert the dictionary(use case)."""
-    given_dict: {'a': 'l', 'b': 'k', 'c' : 'd'}
+    given_dict: dict[str, str] = {'a': 'l', 'b': 'k', 'c' : 'd'}
     assert invert(given_dict) == {'l': 'a', 'k': 'b', 'd': 'c'}
 
 
 def test_dict_nonunique_values() -> None:
     """If the given_dict has at least one pair of non-unique values, it should not invert the dictionary and instead raise a Key error(use case)."""
-    given_dict: {'k': 'lol', 'm': 'lol'}
+    given_dict: dict[str, str] = {'k': 'lol', 'm': 'lol'}
     with pytest.raises(KeyError):
         invert(given_dict)
 
@@ -99,7 +99,7 @@ def test_multiple_elements_start_with_same_letter() -> None:
 def test_at_least_one_value_in_list_upper_cased() -> None:
     """If the given_list has at least one value that is upper cased, then alphabetizer should still add that value into the value list UNALPHABETIZED(use case)."""
     returned_dict: dict[str, str[list]] = {}
-    given_list: list[str] = ['Cat', 'log', 'Classs', 'Lid']
+    given_list: list[str] = ['Cat', 'log', 'Class', 'Lid']
     returned_dict = {'c': ['Cat', 'Class'], 'l': ['log', 'Lid']}
     assert(alphabetizer(given_list)) == returned_dict
 
