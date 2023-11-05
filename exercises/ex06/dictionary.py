@@ -65,7 +65,7 @@ def alphabetizer(given_list: list[str]) -> dict[str, list[str]]:
 def update_attendance(given_dict: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """This function returns a dictionary updated with a day as the key and a value as the updated value."""
     new_list: list[str] = []
-    if day in given_dict:
+    if day in given_dict and (student not in given_dict[day]):
         given_dict[day].append(student)
     else:
         new_list.append(student)
