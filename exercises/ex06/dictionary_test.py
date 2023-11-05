@@ -34,14 +34,14 @@ def test_dict_nonunique_values() -> None:
 def test_empty_dict_for_favorite() -> None:
     """If the given_dict is empty, favorite_color(given_dict) should return an empty string(edge case)."""
     given_dict: dict[str, str] = {} 
-    assert(favorite_color(given_dict)) == ""
+    assert favorite_color(given_dict) == ""
 
 
 def test_one_color_appeares_most() -> None:
     """If the given_dict has only value that appears the most, favorite_color(given_dict) should return that value(use_case)."""
     given_dict: dict[str, str] = {'Marc': 'yellow', 'Narasimha': 'yellow', 'John': 'blue'}
     word_returned: str = 'yellow'
-    assert(favorite_color(given_dict)) == word_returned
+    assert favorite_color(given_dict) == word_returned
 
 
 def test_multiple_color_appeares_most() -> None:
@@ -49,7 +49,7 @@ def test_multiple_color_appeares_most() -> None:
     word_returned: str = ""
     given_dict: dict[str, str] = {'Marc': 'yellow', 'Narasimha': 'red', 'Michael': 'yellow', 'Andreas': 'red'}
     word_returned = 'yellow'
-    assert(favorite_color(given_dict)) == word_returned
+    assert favorite_color(given_dict) == word_returned
 
 
 """The test_cases below are for the function "count"."""
@@ -58,9 +58,9 @@ def test_multiple_color_appeares_most() -> None:
 def test_every_element_in_list_same() -> None:
     """If the given_list has all the same values, count should just produce a dict with one key and value pair(edge case because we would not expect a list to have values that are all the same)."""
     returned_dict: dict[str, int] = {}
-    given_list : list[str] = ['car', 'car', 'car', 'car', 'car']
+    given_list: list[str] = ['car', 'car', 'car', 'car', 'car']
     returned_dict = {'car': 5}
-    assert(count(given_list)) == returned_dict
+    assert count(given_list) == returned_dict
 
 
 def test_every_element_different_in_list() -> None:
@@ -68,7 +68,7 @@ def test_every_element_different_in_list() -> None:
     returned_dict: dict[str, int] = {}
     given_list: list[str] = ['car', 'dog', 'log']
     returned_dict = {'car': 1, 'dog': 1, 'log': 1}
-    assert(count(given_list)) == returned_dict
+    assert count(given_list) == returned_dict
 
 
 def test_repeated_elements_in_list() -> None:
@@ -76,7 +76,8 @@ def test_repeated_elements_in_list() -> None:
     returned_dict: dict[str, int] = {}
     given_list: list[str] = ['car', 'dog', 'log', 'car']
     returned_dict = {'car': 2, 'dog': 1, 'log': 1}
-    assert(count(given_list)) == returned_dict
+    assert count(given_list) == returned_dict
+
 
 """The test_cases below test for the function "alphabetizer"."""
 
@@ -86,7 +87,7 @@ def test_empty_list() -> None:
     returned_dict: dict[str, str[list]] = {}
     given_list: list[str] = []
     returned_dict = {}
-    assert(alphabetizer(given_list)) == returned_dict
+    assert alphabetizer(given_list) == returned_dict
 
 
 def test_multiple_elements_start_with_same_letter() -> None:
@@ -94,7 +95,7 @@ def test_multiple_elements_start_with_same_letter() -> None:
     returned_dict: dict[str, str[list]] = {}
     given_list: list[str] = ['cat', 'dog', 'class']
     returned_dict = {'c': ['cat', 'class'], 'd': ['dog']}
-    assert(alphabetizer(given_list)) == returned_dict
+    assert alphabetizer(given_list) == returned_dict
 
 
 def test_at_least_one_value_in_list_upper_cased() -> None:
@@ -102,7 +103,7 @@ def test_at_least_one_value_in_list_upper_cased() -> None:
     returned_dict: dict[str, str[list]] = {}
     given_list: list[str] = ['Cat', 'log', 'Class', 'Lid']
     returned_dict = {'c': ['Cat', 'Class'], 'l': ['log', 'Lid']}
-    assert(alphabetizer(given_list)) == returned_dict
+    assert alphabetizer(given_list) == returned_dict
 
 """The test cases below test for the function "update_attendance"."""
 
@@ -112,7 +113,7 @@ def test_empty_dict_and_day_student_empty() -> None:
     returned_dict: dict[str, list[str]] = {}
     student: str = ""
     day: str = ""
-    assert(update_attendance(returned_dict, day, student)) == returned_dict
+    assert update_attendance(returned_dict, day, student) == returned_dict
   
 
 def test_empty_dict_and_day_student_non_empty() -> None:
@@ -123,7 +124,7 @@ def test_empty_dict_and_day_student_non_empty() -> None:
     day: str = "Monday"
     returned_value_list.append(student)
     returned_dict = {day: returned_value_list}
-    assert(update_attendance(returned_dict, day, student)) == returned_dict
+    assert update_attendance(returned_dict, day, student) == returned_dict
 
 
 def test_non_empty_dict_and_day_student_non_empty() -> None:
@@ -132,4 +133,4 @@ def test_non_empty_dict_and_day_student_non_empty() -> None:
     day: str = "Monday"
     student: str = "Felix"
     returned_dict[day].append(student)
-    assert(update_attendance(returned_dict, day, student)) == returned_dict
+    assert update_attendance(returned_dict, day, student) == returned_dict
