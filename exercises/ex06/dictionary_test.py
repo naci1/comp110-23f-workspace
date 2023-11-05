@@ -2,7 +2,7 @@
 
 __author__ = "730652828"
 
-from exercises.ex06.dictionary import invert, favorite_color, count, alphabetizer, update_attendance
+from dictionary import invert, favorite_color, count, alphabetizer, update_attendance
 
 import pytest
 
