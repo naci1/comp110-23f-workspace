@@ -17,7 +17,7 @@ def test_empty_dict() -> None:
 
 def test_dict_unique_values() -> None:
     """If the given_dict has unique values, it should invert the dictionary(use case)."""
-    given_dict: dict[str, str] = {'a': 'l', 'b': 'k', 'c' : 'd'}
+    given_dict: dict[str, str] = {'a': 'l', 'b': 'k', 'c': 'd'}
     assert invert(given_dict) == {'l': 'a', 'k': 'b', 'd': 'c'}
 
 
@@ -27,8 +27,8 @@ def test_dict_nonunique_values() -> None:
     with pytest.raises(KeyError):
         invert(given_dict)
 
-"""The test_cases below test for the function "favorite_colors"."""
 
+"""The test_cases below test for the function "favorite_colors"."""
 
 def test_empty_dict() -> None:
     """If the given_dict is empty, favorite_color(given_dict) should return an empty string(edge case)."""
@@ -50,6 +50,7 @@ def test_multiple_color_appeares_most() -> None:
     given_dict: dict[str, str] = {'Marc': 'yellow', 'Narasimha': 'red', 'Michael': 'yellow', 'Andreas': 'red'}
     word_returned = 'yellow'
     assert(favorite_color(given_dict)) == word_returned
+
 
 """The test_cases below are for the function "count"."""
 
@@ -111,7 +112,6 @@ def test_empty_dict_and_day_student_empty() -> None:
     returned_dict: dict[str, list[str]] = {}
     student: str = ""
     day: str = ""
-    returned_dict = {}
     assert(update_attendance(returned_dict, day, student)) == returned_dict
   
 
