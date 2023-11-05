@@ -57,25 +57,22 @@ def test_multiple_color_appeares_most() -> None:
 
 def test_every_element_in_list_same() -> None:
     """If the given_list has all the same values, count should just produce a dict with one key and value pair(edge case because we would not expect a list to have values that are all the same)."""
-    returned_dict: dict[str, int] = {}
     given_list: list[str] = ['car', 'car', 'car', 'car', 'car']
-    returned_dict = {'car': 5}
+    returned_dict: dict[str, int] = {'car': 5}
     assert count(given_list) == returned_dict
 
 
 def test_every_element_different_in_list() -> None:
     """If the given_list has all unique values, the number of key value pairs returned by count should be equal to the length of the list(use case)."""
-    returned_dict: dict[str, int] = {}
     given_list: list[str] = ['car', 'dog', 'log']
-    returned_dict = {'car': 1, 'dog': 1, 'log': 1}
+    returned_dict: dict[str, int] = {'car': 1, 'dog': 1, 'log': 1}
     assert count(given_list) == returned_dict
 
 
 def test_repeated_elements_in_list() -> None:
     """If the given_list has repeated values, then count should return a key value pair such that one value is greater than 1(use case)."""
-    returned_dict: dict[str, int] = {}
     given_list: list[str] = ['car', 'dog', 'log', 'car']
-    returned_dict = {'car': 2, 'dog': 1, 'log': 1}
+    returned_dict: dict[str, int] = {'car': 2, 'dog': 1, 'log': 1}
     assert count(given_list) == returned_dict
 
 
@@ -84,25 +81,22 @@ def test_repeated_elements_in_list() -> None:
 
 def test_empty_list() -> None:
     """If the given_list is empty, then alphabetizer should return an empty dictionary(edge case)."""
-    returned_dict: dict[str, str[list]] = {}
     given_list: list[str] = []
-    returned_dict = {}
+    returned_dict: dict[str, str[list]] = {}
     assert alphabetizer(given_list) == returned_dict
 
 
 def test_multiple_elements_start_with_same_letter() -> None:
     """If the given_list has multiple elements that start with the same letter, the value list for a key has more than one element(use case)."""
-    returned_dict: dict[str, str[list]] = {}
     given_list: list[str] = ['cat', 'dog', 'class']
-    returned_dict = {'c': ['cat', 'class'], 'd': ['dog']}
+    returned_dict: dict[str, str[list]] = {'c': ['cat', 'class'], 'd': ['dog']}
     assert alphabetizer(given_list) == returned_dict
 
 
 def test_at_least_one_value_in_list_upper_cased() -> None:
     """If the given_list has at least one value that is upper cased, then alphabetizer should still add that value into the value list UNALPHABETIZED(use case)."""
-    returned_dict: dict[str, str[list]] = {}
     given_list: list[str] = ['Cat', 'log', 'Class', 'Lid']
-    returned_dict = {'c': ['Cat', 'Class'], 'l': ['log', 'Lid']}
+    returned_dict: dict[str, str[list]] = {'c': ['Cat', 'Class'], 'l': ['log', 'Lid']}
     assert alphabetizer(given_list) == returned_dict
 
 
