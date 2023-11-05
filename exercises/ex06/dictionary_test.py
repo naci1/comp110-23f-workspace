@@ -30,17 +30,17 @@ def test_dict_nonunique_values() -> None:
 
 """The test_cases below test for the function "favorite_colors"."""
 
-def test_empty_dict() -> None:
+
+def test_empty_dict_for_favorite() -> None:
     """If the given_dict is empty, favorite_color(given_dict) should return an empty string(edge case)."""
-    given_dict: dict[str, str] = {}
+    given_dict: dict[str, str] = {} 
     assert(favorite_color(given_dict)) == ""
 
 
 def test_one_color_appeares_most() -> None:
     """If the given_dict has only value that appears the most, favorite_color(given_dict) should return that value(use_case)."""
-    word_returned: str = ""
     given_dict: dict[str, str] = {'Marc': 'yellow', 'Narasimha': 'yellow', 'John': 'blue'}
-    word_returned = 'yellow'
+    word_returned: str = 'yellow'
     assert(favorite_color(given_dict)) == word_returned
 
 
@@ -133,9 +133,3 @@ def test_non_empty_dict_and_day_student_non_empty() -> None:
     student: str = "Felix"
     returned_dict[day].append(student)
     assert(update_attendance(returned_dict, day, student)) == returned_dict
-    
-
-
-
-    
-    
