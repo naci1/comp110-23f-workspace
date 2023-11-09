@@ -40,12 +40,3 @@ class Point:
         self.y += number_to_add
         newpoint: Point = Point(self.x, self.y)
         return newpoint
-
-    
-    
-
-
-    
-
-
-       
