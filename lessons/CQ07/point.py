@@ -34,7 +34,7 @@ class Point:
         newpoint: Point = Point(self.x, self.y)
         return newpoint
     
-    def __add__(self, number_to_add: int | float):
+    def __add__(self, number_to_add: int | float) -> Point:
         """This adds a number to the x and y values in the point by the same value."""
         self.x += number_to_add
         self.y += number_to_add
