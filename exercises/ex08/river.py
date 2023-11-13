@@ -1,5 +1,8 @@
 """File to define River class."""
 
+__author__ = "730652828"
+
+
 from exercises.ex08.fish import Fish
 from exercises.ex08.bear import Bear
 
@@ -28,12 +31,12 @@ class River:
         bear_idx: int = 0
         fish_idx: int = 0
         while bear_idx < len(self.bears):
-            if self.bears[bear_idx.age] <= 3:
+            if self.bears[bear_idx].age <= 3:
                 new_bear_list.append(self.bears[bear_idx])
             bear_idx += 1
         self.bears = new_bear_list
         while fish_idx < len(self.fish):
-            if self.fish[fish_idx.age] <= 5:
+            if self.fish[fish_idx].age <= 5:
                 new_fish_list.append(self.fish[fish_idx])
             fish_idx += 1
         self.fish = new_fish_list
@@ -44,8 +47,8 @@ class River:
         idx: int = 0
         while idx < len(self.bears):
             if len(self.fish) > 5:
-                self.fish.remove_fish(3)
-                self.bears.eat(3)
+                self.remove_fish(3)
+                self.bears[idx].eat(3)
             idx += 1
 
 
@@ -55,7 +58,7 @@ class River:
         """If the hunger_score of bear < 0, we remove Bear from the river."""
         idx: int = 0
         while idx < len(self.bears):
-            if self.bears[idx.hunger_score] < 0:
+            if self.bears[idx].hunger_score < 0:
                 self.bears.pop(idx)
             idx += 1
         return None
@@ -75,8 +78,8 @@ class River:
         idx: int = 0
         while idx < len(self.bears):
             new_bear: Bear = Bear()
-            self.fish.append(new_bear)
-            idx += .5
+            self.bears.append(new_bear)
+            idx += 2
         return None
     
     def view_river(self):
@@ -120,7 +123,7 @@ class River:
     def remove_fish(self, amount: int):
         counter: int = 0
         while counter< amount:
-            self.fish.remove(0)
+            self.fish.pop(0)
             counter += 1
 
             
