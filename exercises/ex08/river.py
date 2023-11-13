@@ -31,12 +31,12 @@ class River:
         bear_idx: int = 0
         fish_idx: int = 0
         while bear_idx < len(self.bears):
-            if self.bears[bear_idx].age <= 3:
+            if self.bears[bear_idx].age <= 5:
                 new_bear_list.append(self.bears[bear_idx])
             bear_idx += 1
         self.bears = new_bear_list
         while fish_idx < len(self.fish):
-            if self.fish[fish_idx].age <= 5:
+            if self.fish[fish_idx].age <= 3:
                 new_fish_list.append(self.fish[fish_idx])
             fish_idx += 1
         self.fish = new_fish_list
