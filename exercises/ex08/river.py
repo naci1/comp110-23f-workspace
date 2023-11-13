@@ -25,8 +25,8 @@ class River:
 
     def check_ages(self):
         """The check_ages method removes a fish if the fish age is greater than 3 and if the bear age is greater than 5."""
-        new_bear_list : list[Bear]
-        new_fish_list: list[Fish]
+        new_bear_list: list[Bear] = []
+        new_fish_list: list[Fish] = []
         # iterating through the original list of Bears
         bear_idx: int = 0
         fish_idx: int = 0
@@ -66,7 +66,8 @@ class River:
     def repopulate_fish(self):
         """Every pair of fish will produce 2 more fish."""
         idx: float = 0.0
-        while idx < len(self.fish):
+        size_of_fish_list = len(self.fish)
+        while idx < len(size_of_fish_list):
             new_fish: Fish = Fish()
             self.fish.append(new_fish)
             idx += 0.5
@@ -76,7 +77,8 @@ class River:
     def repopulate_bears(self):
         """A pair of bears will produce 1 bear."""
         idx: int = 0
-        while idx < len(self.bears):
+        size_of_bear_list = self.bears
+        while idx < len(size_of_bear_list):
             new_bear: Bear = Bear()
             self.bears.append(new_bear)
             idx += 2
