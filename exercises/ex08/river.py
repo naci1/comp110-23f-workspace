@@ -6,14 +6,16 @@ __author__ = "730652828"
 from exercises.ex08.fish import Fish
 from exercises.ex08.bear import Bear
 
+
 class River:
+    """This is the river class."""
 
     day: int
     bears: list[Bear]
     fish: list[Fish]
     
     def __init__(self, num_fish: int, num_bears:int):
-        """New River with num_fish Fish and num_bears Bears"""
+        """New River with num_fish Fish and num_bears Bears."""
         self.day: int = 0
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
@@ -65,7 +67,9 @@ class River:
         """Every pair of fish will produce 2 more fish."""
         idx: int = 0
         size_of_fish_list: int = len(self.fish)
-        while idx < size_of_fish_list:
+        if size_of_fish_list % 2 == 1:
+            size_of_fish_list -= 1
+        while idx < 2 * size_of_fish_list:
             new_fish: Fish = Fish()
             self.fish.append(new_fish)
             idx += 1

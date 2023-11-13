@@ -2,7 +2,9 @@
 
 __author__ = "730652828"
 
+
 class Bear:
+    """Defines the Bear class."""
 
     age: int
     hunger_score: int
