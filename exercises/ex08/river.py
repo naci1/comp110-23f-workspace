@@ -14,7 +14,7 @@ class River:
     bears: list[Bear]
     fish: list[Fish]
     
-    def __init__(self, num_fish: int, num_bears:int):
+    def __init__(self, num_fish: int, num_bears: int):
         """New River with num_fish Fish and num_bears Bears."""
         self.day: int = 0
         self.fish: list[Fish] = []
@@ -117,16 +117,17 @@ class River:
         
     
     def one_river_week(self):
+        """Returns the statistics of fish and bears 7 times for a week."""
         idx: int = 0
         # calls the function one_river_day() 7 times
         while idx < 7:
             self.one_river_day()
             idx += 1
     
+
     def remove_fish(self, amount: int):
+        """Removes "amount" number of fish from the list."""
         counter: int = 0
         while counter< amount:
             self.fish.pop(0)
             counter += 1
-
-            
