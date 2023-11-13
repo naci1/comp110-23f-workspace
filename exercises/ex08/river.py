@@ -115,7 +115,6 @@ class River:
         # Visualize River
         self.view_river()
         
-    
     def one_river_week(self):
         """Returns the statistics of fish and bears 7 times for a week."""
         idx: int = 0
@@ -124,7 +123,6 @@ class River:
             self.one_river_day()
             idx += 1
     
-
     def remove_fish(self, amount: int):
         """Removes "amount" number of fish from the list."""
         counter: int = 0
