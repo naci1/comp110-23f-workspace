@@ -66,8 +66,8 @@ class River:
     def repopulate_fish(self):
         """Every pair of fish will produce 2 more fish."""
         idx: float = 0.0
-        size_of_fish_list = len(self.fish)
-        while idx < len(size_of_fish_list):
+        size_of_fish_list: int = len(self.fish)
+        while idx < size_of_fish_list:
             new_fish: Fish = Fish()
             self.fish.append(new_fish)
             idx += 0.5
@@ -77,8 +77,8 @@ class River:
     def repopulate_bears(self):
         """A pair of bears will produce 1 bear."""
         idx: int = 0
-        size_of_bear_list = self.bears
-        while idx < len(size_of_bear_list):
+        size_of_bear_list: int = len(self.bears)
+        while idx < size_of_bear_list:
             new_bear: Bear = Bear()
             self.bears.append(new_bear)
             idx += 2
