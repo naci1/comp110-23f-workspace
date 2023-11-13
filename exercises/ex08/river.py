@@ -126,6 +126,6 @@ class River:
     def remove_fish(self, amount: int):
         """Removes "amount" number of fish from the list."""
         counter: int = 0
-        while counter< amount:
+        while counter < amount:
             self.fish.pop(0)
             counter += 1
