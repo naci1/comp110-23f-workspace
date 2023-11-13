@@ -65,12 +65,12 @@ class River:
         
     def repopulate_fish(self):
         """Every pair of fish will produce 2 more fish."""
-        idx: float = 0.0
-        size_of_fish_list: int = len(self.fish)
-        while idx < size_of_fish_list:
-            new_fish: Fish = Fish()
-            self.fish.append(new_fish)
-            idx += 0.5
+        # idx: float = 0.0
+        # size_of_fish_list: int = len(self.fish)
+        # while idx < size_of_fish_list:
+        #     new_fish: Fish = Fish()
+        #     self.fish.append(new_fish)
+        #     idx += 0.5
 
         return None
     
