@@ -50,8 +50,6 @@ class River:
                 self.remove_fish(3)
                 self.bears[idx].eat(3)
             idx += 1
-
-
         return None
     
     def check_hunger(self):
@@ -67,7 +65,7 @@ class River:
         """Every pair of fish will produce 2 more fish."""
         idx: int = 0
         size_of_fish_list: int = len(self.fish)
-        while idx < 2 * size_of_fish_list:
+        while idx < size_of_fish_list:
             new_fish: Fish = Fish()
             self.fish.append(new_fish)
             idx += 1
