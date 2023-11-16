@@ -31,8 +31,8 @@ class Node:
         """Returns a linked list of every element minus the head."""
         return self.next
     
-    def last(self) -> int | Node:
+    def last(self) -> int:
         """Tries to return the data value of the last element in the linked list."""
         if self.next == None:
             return self.data
-        return self.next
+        return self.next.last()
