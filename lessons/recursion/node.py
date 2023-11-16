@@ -26,7 +26,6 @@ class Node:
         """Returns the data for the first element in the node."""
         return self.data
         
-    
     def tail(self) -> Node | None:
         """Returns a linked list of every element minus the head."""
         return self.next
