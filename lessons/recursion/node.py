@@ -32,6 +32,6 @@ class Node:
     
     def last(self) -> int:
         """Tries to return the data value of the last element in the linked list."""
-        if self.next == None:
+        if self.next is None:
             return self.data
         return self.next.last()
