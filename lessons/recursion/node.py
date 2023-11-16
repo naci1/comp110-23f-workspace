@@ -28,9 +28,11 @@ class Node:
         
     
     def tail(self) -> Node | None:
+        """Returns a linked list of every element minus the head."""
         return self.next
     
     def last(self) -> int | Node:
+        """Tries to return the data value of the last element in the linked list."""
         if self.next == None:
             return self.data
         return self.next
