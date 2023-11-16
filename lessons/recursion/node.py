@@ -30,7 +30,7 @@ class Node:
     def tail(self) -> Node | None:
         return self.next
     
-    def last(self) -> int:
+    def last(self) -> int | Node:
         if self.next == None:
             return self.data
         return self.next
