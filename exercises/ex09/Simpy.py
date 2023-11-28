@@ -30,7 +30,7 @@ class Simpy:
         """Fills the attribute "values" with a range of values starting from a starting value to a stop value."""
         value_to_append: float = start
         assert step != 0.0
-        while(value_to_append != stop):
+        while value_to_append != stop:
             self.values.append(start)
             start += step
             value_to_append = start
@@ -76,14 +76,14 @@ class Simpy:
         bool_list: list[bool] = []
         if type(rhs) is float:
             for i in range(len(self.values)):
-                if(self.values[i] == rhs):
+                if self.values[i] == rhs:
                     bool_list.append(True)
                 else:
                     bool_list.append(False)
         else:
             assert len(rhs.values) == len(self.values)
             for i in range(len(self.values)):
-                if(self.values[i] == rhs.values[i]):
+                if self.values[i] == rhs.values[i]:
                     bool_list.append(True)
                 else:
                     bool_list.append(False)
@@ -94,32 +94,28 @@ class Simpy:
         bool_list: list[bool] = []
         if type(rhs) is float:
             for i in range(len(self.values)):
-                if(self.values[i] > rhs):
+                if self.values[i] > rhs:
                     bool_list.append(True)
                 else:
                     bool_list.append(False)
         else:
             assert len(rhs.values) == len(self.values)
             for i in range(len(self.values)):
-                if(self.values[i] > rhs.values[i]):
+                if self.values[i] > rhs.values[i]:
                     bool_list.append(True)
                 else:
                     bool_list.append(False)
         return bool_list
     
-    def __getitem__(self, rhs: int) -> float:
-        """Returns the value at a particular index for the values attribute."""
-        return self.values[rhs]
-    
     def __getitem__(self, rhs: Union[int, list[bool]]) -> Union[float, Simpy]:
-        """Returns the value of """
+        """Returns the value at a particular index in a list that satisfies a particular boolean condition. Otherwise, it just returns a value at a particular index."""
         if type(rhs) is int:
             return self.values[rhs]
         else:
             assert len(rhs) == len(self.values)
             new_list: list[float] = []
             for i in range(len(self.values)):
-                if rhs[i] == True:
+                if rhs[i] is True:
                     new_list.append(self.values[i])
             new_simpy_object: Simpy = Simpy(new_list)
             return new_simpy_object
