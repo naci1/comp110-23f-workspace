@@ -22,10 +22,11 @@ class Simpy:
     
     def fill(self, value: float, iterations: int) -> None:
         """Fills the attribute "values" with a value specific number of times."""
+        self.values = []
         for i in range(iterations):
             self.values.append(value)
     
-    def arange(self, start: float, stop: float, step: float = 1.0):
+    def arange(self, start: float, stop: float, step: float = 1.0) -> None:
         """Fills the attribute "values" with a range of values starting from a starting value to a stop value."""
         value_to_append: float = start
         assert step != 0.0
