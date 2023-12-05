@@ -44,9 +44,11 @@ def head(table: dict[str, list[str]], num_rows: int) -> dict[str, list[str]]:
     dict_to_be_returned: dict[str, list[str]] = {}
     for key in table:
         empty_list: list[str] = []
-        list_to_iterate: list[str] = table[key]
-        for i in range(num_rows):
-            empty_list.append(list_to_iterate[i])
+        value_we_are_at: int = 0
+        for string in table[key]:
+            if(value_we_are_at < num_rows):
+                empty_list.append(string)
+            value_we_are_at += 1
         dict_to_be_returned[key] = empty_list
     return dict_to_be_returned
 
@@ -70,4 +72,6 @@ def concat(table_1: dict[str, list[str]], table_2: dict[str, list[str]]) -> dict
         else:
             dict_to_be_returned[key] = table_2[key]
     return dict_to_be_returned
+
+def 
 
