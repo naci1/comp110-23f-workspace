@@ -61,6 +61,7 @@ def select(table: dict[str, list[str]], col_names: list[str]) -> dict[str, list[
             dict_to_be_returned[value] = table[value]
     return dict_to_be_returned
 
+
 def concat(table_1: dict[str, list[str]], table_2: dict[str, list[str]]) -> dict[str, list[str]]:
     """Combines two tables and returns a new table."""
     dict_to_be_returned: dict[str, list[str]] = {}
@@ -73,5 +74,15 @@ def concat(table_1: dict[str, list[str]], table_2: dict[str, list[str]]) -> dict
             dict_to_be_returned[key] = table_2[key]
     return dict_to_be_returned
 
-def 
+
+def count(data: list[str]) -> dict[str, int]:
+    """Make a dict with the keys as unique string values from the "data" and int as the number of times the value occured."""
+    empty_dict: dict[str, int] = {}
+    for value in data:
+        if value in empty_dict:
+            empty_dict[value] += 1
+        else:
+            empty_dict[value] = 1
+    return empty_dict
+
 
