@@ -1,6 +1,6 @@
-from csv import DictReader
-
 """Dictionary related utility functions."""
+
+from csv import DictReader
 
 __author__ = "730652828"
 
@@ -48,7 +48,7 @@ def head(table: dict[str, list[str]], num_rows: int) -> dict[str, list[str]]:
         empty_list: list[str] = []
         value_we_are_at: int = 0
         for string in table[key]:
-            if(value_we_are_at < num_rows):
+            if value_we_are_at < num_rows:
                 empty_list.append(string)
             value_we_are_at += 1
         dict_to_be_returned[key] = empty_list
