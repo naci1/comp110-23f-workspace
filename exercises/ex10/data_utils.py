@@ -69,7 +69,7 @@ def concat(table_1: dict[str, list[str]], table_2: dict[str, list[str]]) -> dict
         dict_to_be_returned[key] = table_1[key]
     for key in table_2:
         if key in dict_to_be_returned:
-            dict_to_be_returned[key].append(table_2[key])
+            dict_to_be_returned[key] += table_2[key]
         else:
             dict_to_be_returned[key] = table_2[key]
     return dict_to_be_returned
