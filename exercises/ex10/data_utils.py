@@ -44,8 +44,9 @@ def head(table: dict[str, list[str]], num_rows: int) -> dict[str, list[str]]:
     dict_to_be_returned: dict[str, list[str]] = {}
     for key in table:
         empty_list: list[str] = []
-        for value in empty_list:
-            empty_list.append(value)
+        list_to_iterate: list[str] = table[key]
+        for i in range(num_rows):
+            empty_list.append(list_to_iterate[i])
         dict_to_be_returned[key] = empty_list
     return dict_to_be_returned
 
@@ -57,3 +58,16 @@ def select(table: dict[str, list[str]], col_names: list[str]) -> dict[str, list[
         if value in table:
             dict_to_be_returned[value] = table[value]
     return dict_to_be_returned
+
+def concat(table_1: dict[str, list[str]], table_2: dict[str, list[str]]) -> dict[str, list[str]]:
+    """Combines two tables and returns a new table."""
+    dict_to_be_returned: dict[str, list[str]] = {}
+    for key in table_1:
+        dict_to_be_returned[key] = table_1[key]
+    for key in table_2:
+        if key in dict_to_be_returned:
+            dict_to_be_returned[key].append(table_2[key])
+        else:
+            dict_to_be_returned[key] = table_2[key]
+    return dict_to_be_returned
+
